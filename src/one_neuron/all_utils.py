@@ -18,8 +18,8 @@ def prepare_data(df):
         tuple: it returns the tuples of dependent and independent variable
     """    
     logging.info("preparing the data by segregating the independent and dependent variable")
-    X = df.drop("y", axis = 1)
-    y = df["y"]
+    X = df.iloc[:, :-1]
+    y = df.iloc[:,-1]
     return X, y
 
 def save_model(model, filename):

@@ -4,7 +4,7 @@ import logging
 class Perceptron:
     def __init__(self, eta, epochs, independent_variable):
         np.random.seed(3)
-        self.weights = np.random.randn(independent_variable)*1e-4
+        self.weights = np.random.randn(independent_variable+1)*1e-4
         logging.info(f"initial weights before training : {self.weights}")
         self.eta = eta
         self.epochs = epochs
